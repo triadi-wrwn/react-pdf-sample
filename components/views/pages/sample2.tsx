@@ -23,8 +23,8 @@ const PDFDownloadLink = dynamic(() => import('@react-pdf/renderer').then((mod) =
 
 const Sample2 = () => {
   const [data, setData] = useState<Sample2Data>({
-    title: 'Test judul ',
-    subtitle: 'Sub judul',
+    title: 'Don Quijote de la Mancha',
+    subtitle: 'Miguel de Cervantes',
     description:
       'En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los\
        de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón \
@@ -42,18 +42,20 @@ const Sample2 = () => {
     <ResizablePanelGroup direction='horizontal' className='w-full'>
       <ResizablePanel defaultSize={30}>
         <div className='flex items-center justify-center p-6'>
-          <span className='font-semibold'>Sample 1</span>
+          <span className='font-semibold'>Sample Dynamic Content</span>
         </div>
         <Form1 data={data} onChange={(value) => setData(value)} />
       </ResizablePanel>
       <ResizableHandle />
       <ResizablePanel defaultSize={70}>
-        <div className='flex flex-col justify-center items-end gap-4 w-10/12 h-full mx-auto my-10'>
-          <Button variant='default' asChild>
-            <PDFDownloadLink document={<Sample2Template data={data} />} fileName='Sample1.pdf'>
-              Download
-            </PDFDownloadLink>
-          </Button>
+        <div className='flex flex-col justify-center items-center gap-4 w-10/12 h-full mx-auto my-10'>
+          <div className='flex justify-end w-full'>
+            <Button variant='default' asChild>
+              <PDFDownloadLink document={<Sample2Template data={data} />} fileName='Sample1.pdf'>
+                Download
+              </PDFDownloadLink>
+            </Button>
+          </div>
           <PDFViewer width={'100%'} height={'100%'} showToolbar={false}>
             <Sample2Template data={data} />
           </PDFViewer>

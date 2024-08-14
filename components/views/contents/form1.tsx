@@ -3,13 +3,13 @@
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import React, { useEffect, useState } from 'react';
-import { Sample1Data } from './page';
 import useDebounce from '@/lib/useDebounce';
 import { Textarea } from '@/components/ui/textarea';
+import { Sample2Data } from '../pages/sample2';
 
-const Form1 = (props: { data: Sample1Data; onChange: (value: Sample1Data) => void }) => {
+const Form1 = (props: { data: Sample2Data; onChange: (value: Sample2Data) => void }) => {
   const { data, onChange } = props;
-  const [dataForm, setDataForm] = useState<Sample1Data>(data);
+  const [dataForm, setDataForm] = useState<Sample2Data>(data);
 
   const titleValue = useDebounce(dataForm.title, 500);
   const subtitleValue = useDebounce(dataForm.subtitle, 500);

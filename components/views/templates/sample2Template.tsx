@@ -2,9 +2,9 @@
 
 import { styles } from '@/styles/sample1.styles';
 import { Page, Text, Image, Document } from '@react-pdf/renderer';
-import { Sample1Data } from './page';
+import { Sample2Data } from '../pages/sample2';
 
-const Quixote = (props: { data: Sample1Data }) => {
+const Sample1Template = (props: { data: Sample2Data }) => {
   const { data } = props;
   return (
     <Document>
@@ -24,4 +24,4 @@ const Quixote = (props: { data: Sample1Data }) => {
  )
 };
 
-export default Quixote;
+export default Sample1Template;

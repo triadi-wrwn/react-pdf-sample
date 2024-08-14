@@ -1,6 +1,6 @@
 'use client';
 
-import { styles } from '@/styles/sample1.styles';
+import { styles } from '@/styles/sample2.styles';
 import { Page, Text, Image, Document } from '@react-pdf/renderer';
 import { Sample2Data } from '../pages/sample2';
 

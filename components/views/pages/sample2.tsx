@@ -5,7 +5,7 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/componen
 import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
-import Form1 from '@/components/views/contents/form1';
+import Form2 from '@/components/views/contents/form2';
 import Sample2Template from '../templates/sample2Template';
 
 const PDFViewer = dynamic(() => import('@react-pdf/renderer').then((mod) => mod.PDFViewer), {
@@ -44,7 +44,7 @@ const Sample2 = () => {
         <div className='flex items-center justify-center p-6'>
           <span className='font-semibold'>Sample Dynamic Content</span>
         </div>
-        <Form1 data={data} onChange={(value) => setData(value)} />
+        <Form2 data={data} onChange={(value) => setData(value)} />
       </ResizablePanel>
       <ResizableHandle />
       <ResizablePanel defaultSize={70}>

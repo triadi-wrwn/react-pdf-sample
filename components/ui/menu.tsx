@@ -24,6 +24,13 @@ const NavMenu = () => {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href='/sample3' legacyBehavior passHref>
+            <NavigationMenuLink active={pathname === '/sample3'} className={navigationMenuTriggerStyle()}>
+              Sample dynamic with table
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

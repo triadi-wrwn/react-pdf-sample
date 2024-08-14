@@ -7,7 +7,7 @@ import useDebounce from '@/lib/useDebounce';
 import { Textarea } from '@/components/ui/textarea';
 import { Sample2Data } from '../pages/sample2';
 
-const Form1 = (props: { data: Sample2Data; onChange: (value: Sample2Data) => void }) => {
+const Form2 = (props: { data: Sample2Data; onChange: (value: Sample2Data) => void }) => {
   const { data, onChange } = props;
   const [dataForm, setDataForm] = useState<Sample2Data>(data);
 
@@ -56,4 +56,4 @@ const Form1 = (props: { data: Sample2Data; onChange: (value: Sample2Data) => voi
   );
 };
 
-export default Form1;
+export default Form2;

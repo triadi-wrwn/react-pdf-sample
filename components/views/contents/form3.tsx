@@ -82,12 +82,12 @@ const Form3 = (props: { data: Sample3Data; onChange: (value: Sample3Data) => voi
                 }}
               />
               <Button
-                variant='ghost'
+                variant='default'
                 onClick={() => {
                   setDataForm((state) => ({ ...state, invitees: state.invitees.filter((el) => el.id !== item.id) }));
                 }}
               >
-                Delete
+                X
               </Button>
             </div>
           ))}
